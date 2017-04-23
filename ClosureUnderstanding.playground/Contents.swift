@@ -22,8 +22,7 @@
 
 import UIKit
 
-class ClosureType{
-    
+
     var noParameterNoReturnTypeClosure: () -> () = {
         print("noParameterNoReturnTypeClosure")
     }
@@ -82,23 +81,21 @@ class ClosureType{
         return (evenArr , oddArr)
     }
  
-}
 
 
-let objClosureType = ClosureType()
-objClosureType.noParameterNoReturnTypeClosure()
+noParameterNoReturnTypeClosure()
 
-Swift.print(objClosureType.oneParameterAndReturnTypeClosure("return by Closure"))
-Swift.print(objClosureType.multiParameterAndReturnTypeClosure("Ramanujan\n","Albert"))
+Swift.print(oneParameterAndReturnTypeClosure("return by Closure"))
+Swift.print(multiParameterAndReturnTypeClosure("Ramanujan\n","Albert"))
 
 let arrayNumbers = [2,3,4,5,6,7,8,9]
-Swift.print(objClosureType.oneParameterMultiReturnTypeClosure(arrayNumbers).even)
-Swift.print(objClosureType.oneParameterMultiReturnTypeClosure(arrayNumbers).odd)
-Swift.print(objClosureType.oneParameterMultiReturnTypeClosure(arrayNumbers))
+Swift.print(oneParameterMultiReturnTypeClosure(arrayNumbers).even)
+Swift.print(oneParameterMultiReturnTypeClosure(arrayNumbers).odd)
+Swift.print(oneParameterMultiReturnTypeClosure(arrayNumbers))
 
-objClosureType.noParameterNoReturnTypeClosure_I()
-objClosureType.multiParameterAndReturnTypeClosure_I("CV","Raman")
-objClosureType.oneParameterMultiReturnTypeClosure_I(arrayNumbers)
+noParameterNoReturnTypeClosure_I()
+multiParameterAndReturnTypeClosure_I("CV","Raman")
+oneParameterMultiReturnTypeClosure_I(arrayNumbers)
 
 
 /*
