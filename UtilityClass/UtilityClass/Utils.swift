@@ -7,19 +7,16 @@
 import Foundation
 import UIKit
 
-class Utils {
+public class Utils {
     
-    open class var sharedInstance: Utils {
-        struct Static {
-            static let instance: Utils = Utils()
-        }
-        return Static.instance
+    private init(){
+        
     }
     
-    func validationUITextFields(view:UIView) -> Bool{
+    class func validationUITextFields(view:UIView) -> Bool{
         for view in view.subviews {
             if let textField = view as? UITextField {
-                if let text = textField.text, !text.isEmpty {
+                if let text = textField.text, text.isEmpty {
                     // show error
                     return false
                 }

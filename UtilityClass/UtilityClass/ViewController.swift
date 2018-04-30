@@ -19,8 +19,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func loginAction(_ sender: Any) {
-        
-        if Utils.sharedInstance.validationUITextFields(view: self.view){
+        if Utils.validationUITextFields(view: self.view){
             print("CALL LOGIN API")
         }else{
             alertWithTitleAndMessage(("Alert", "Invalid/Empty Text field"))
